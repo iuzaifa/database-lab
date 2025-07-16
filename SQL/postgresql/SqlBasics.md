@@ -206,3 +206,4 @@ SELECT * FROM books WHERE price > 10;
   Comments are ignored by PostgreSQL during execution.
 
 ---
+

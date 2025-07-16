@@ -57,3 +57,71 @@ SELECT * FROM users;
   3 | Carol  | carol@example.com
 
 ```
+
+Sure! Here's a **simple explanation** of the 5 main **types of SQL queries** with examples:
+
+---
+
+### 🔹 1. **Data Query Language (DQL)**
+
+Used to **fetch data** from the database.
+ *Reads data only.*
+
+```sql
+SELECT * FROM users;
+```
+
+---
+
+### 🔹 2. **Data Manipulation Language (DML)**
+
+Used to **insert, update, or delete** data in tables.
+ *Changes the data, not the structure.*
+
+```sql
+INSERT INTO users (name, email) VALUES ('John', 'john@example.com');
+UPDATE users SET name = 'Johnny' WHERE id = 1;
+DELETE FROM users WHERE id = 2;
+```
+
+---
+
+### 🔹 3. **Data Definition Language (DDL)**
+
+Used to **create or modify the structure** of database objects like tables.
+ *Changes the schema (structure).*
+
+```sql
+CREATE TABLE users (id SERIAL, name TEXT, email TEXT);
+ALTER TABLE users ADD age INT;
+DROP TABLE users;
+```
+
+---
+
+### 🔹 4. **Data Control Language (DCL)**
+
+Used to **control access** (permissions) to the data.
+
+```sql
+GRANT SELECT ON users TO guest_user;
+REVOKE SELECT ON users FROM guest_user;
+```
+
+---
+
+### 🔹 5. **Transaction Control Language (TCL)**
+
+Used to **manage transactions** (group of queries that run together).
+
+```sql
+BEGIN;
+UPDATE users SET name = 'Alice' WHERE id = 1;
+COMMIT;  -- save changes
+
+-- or
+ROLLBACK;  -- undo changes if something went wrong
+```
+
+---
+
